@@ -20,7 +20,7 @@ namespace HelloWorld
         Console.WriteLine(wahrheitswert);
         bool anders = false;
         Console.WriteLine(anders);
-        char buchstabe = (char)48;
+        char buchstabe = (char)4;
         Console.WriteLine(buchstabe);
         long langzahl = 123456789123456789;
         Console.WriteLine(langzahl);
