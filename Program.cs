@@ -13,7 +13,7 @@ namespace HelloWorld
             string age = Console.ReadLine();
             int  alter = Convert.ToInt16(age);
             int  alterinzehn = alter + 10;
-            Console.WriteLine("Hallo " + name + "!, Was geht?" + " Du bist schon " + age + "?" + " Das heisst ja, dass du in 10 Jahren " + alterinzehn + " bist");
+            Console.WriteLine($"Hallo {name}!, Was geht? Du bist schon {age} ? Das heisst ja, dass du in 10 Jahren {alterinzehn} bist");
         }
     }
 }
