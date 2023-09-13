@@ -7,13 +7,13 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Gebe mir deinen Namen!");
-            string name = Console.ReadLine();
-            Console.WriteLine("Wie alt bist du?");
-            string age = Console.ReadLine();
-            int  alter = Convert.ToInt16(age);
-            int  alterinzehn = alter + 10;
-            Console.WriteLine($"Hallo {name}!, Was geht? Du bist schon {age} ? Das heisst ja, dass du in 10 Jahren {alterinzehn} bist");
-        }
-    }
+        // Frage den Nutzer nach 2 Zahlen und gebe das Ergebnis auf der Console aus
+        Console.WriteLine("Welche beiden Zahlen möchtest du addieren?");
+        int zahl1 = Convert.ToInt16(Console.ReadLine());
+        Console.WriteLine("Und?");
+        int zahl2 = Convert.ToInt16(Console.ReadLine());
+        int ergebnis = zahl1 + zahl2;
+        Console.WriteLine($"Das Ergebnis aus {zahl1} und {zahl2} lautet {ergebnis}");
+    }   
+}
 }
