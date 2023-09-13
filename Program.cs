@@ -7,19 +7,23 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            string[] emails = new string[] {
-                "luca.schulz@tecalliance.net","abc@tecalliance.net","xyz@tecalliance.net"
-            };
-            foreach(string email in emails)
+            List<int> myNumberList = new List<int>();
+            Console.WriteLine("Sage mir wieviele Zahln du in deine Liste hinzufügen möchtest");
+            int amountNumbers = Convert.ToInt32(Console.ReadLine());
+
+            while(myNumberList.Count < amountNumbers)
             {
-                Console.WriteLine($"Die Email lautet: {email}");
+                Console.WriteLine("Gebe mir eine Zahl");
+                myNumberList.Add(Convert.ToInt32(Console.ReadLine()));
             }
-            for (int position=0;position< emails.Length; position++)
+            //Summiere alle Zahlen auf
+            int ergebnis = 0;
+            foreach(int zahl in myNumberList)
             {
-                Console.WriteLine($"Die Email lautet: {emails[position]}");
+                ergebnis += zahl;
             }
 
-
+        Console.WriteLine($"Das Eegebnis ist {ergebnis}");
         }   
     }
 }
