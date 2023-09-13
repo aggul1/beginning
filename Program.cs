@@ -5,17 +5,39 @@ namespace HelloWorld
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-        // Frage den Nutzer nach 2 Zahlen und gebe das Ergebnis auf der Console aus /Subtraktion)
-        Console.WriteLine("Welche 2 Zahlen möchtest du voneinander subtrahieren?");
-        int zahl1 = Convert.ToInt16(Console.ReadLine());
-        Console.WriteLine("Und?");
-        int zahl2 = Convert.ToInt16(Console.ReadLine());
-        int ergebnis = zahl1 - zahl2;
-        Console.WriteLine($"{zahl1} - {zahl2} = {ergebnis}");
+        static void Main(string[] args){
+        string text = "Das ist ein Text";
+        Console.WriteLine(text);
+        int zahl = 21;
+        Console.WriteLine(zahl);
+        double kommazahl = 21.3;
+        Console.WriteLine(kommazahl);
+        float weiterflieskomma = 21.354763F;
+        Console.WriteLine(weiterflieskomma);
+        decimal flieskomma = 21.5M;
+        Console.WriteLine(flieskomma);
+        bool wahrheitswert = true;
+        Console.WriteLine(wahrheitswert);
+        bool anders = false;
+        Console.WriteLine(anders);
+        char buchstabe = (char)48;
+        Console.WriteLine(buchstabe);
+        long langzahl = 123456789123456789;
+        Console.WriteLine(langzahl);
+        uint positiveZahldoppeltsolang = 123; 
+        Console.WriteLine(positiveZahldoppeltsolang);
+
+        string[] myArray = new string[10];
+        myArray[0] = "erster Wert";
+        myArray[9] = "letzter Wert";
+
+        List<string> myList = new List<string>();
+        myList.Add("Luca");
+        myList.Add("Katharina");    
+        Console.WriteLine(myList[0]);
+        Console.WriteLine(myList[1]);
+        }
 
 
     }   
-}
 }
