@@ -1,30 +1,39 @@
-﻿using System.Numerics;
+﻿using System.ComponentModel;
+using System.Numerics;
 using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 
 namespace HelloWorld
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            List<int> myNumberList = new List<int>();
-            int user_zahl = 0;
-            do
-            {
-                //codeblock
-                Console.WriteLine("Gebe mir eine Zahl");
-                user_zahl = Convert.ToInt32(Console.ReadLine());
-                myNumberList.Add(user_zahl);
-            } while(user_zahl > 0);
+        static void Main(string[] args){
+        
+        //     Console.WriteLine("Bis zu welcher Zahl soll aufsummiert werden? (0,1,2,...,x)");
+        //     int untilNumber = Convert.ToInt16(Console.ReadLine());
+            
+        //     int ergebnis = 0;
+        //     for(int i = 0; i <=untilNumber;i++)
+        //     {
+        //             ergebnis+= i;
+        //             Console.WriteLine($"Added number {i}, current result {ergebnis}");
+        //     }
 
-            //Summiere alle Zahlen auf
-            int ergebnis = 0;
-            foreach(int zahl in myNumberList)
-            {
-                ergebnis += zahl;
-            }
+                Console.WriteLine("Bis zu welcher Zahl soll aufsummiert werden? (0,1,2,...,x)");
+            
+                int untilnumber = Convert.ToInt16(Console.ReadLine());
 
-        Console.WriteLine($"Das Eegebnis ist {ergebnis}");
-        }   
-    }
+                int i=0;
+                int zahl=0;
+                int ergebnis=0;
+
+                while(i<untilnumber)
+                {
+                    zahl=i+1;
+                    ergebnis+=zahl;
+                    Console.WriteLine($"Added number {i}, current result {ergebnis}");
+                    i++;
+                }
+}
+}
 }
