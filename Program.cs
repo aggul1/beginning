@@ -6,19 +6,10 @@ namespace HelloWorld
     class Program
     {
         static void Main(string[] args){
-            Console.WriteLine("Gebe mir  deinen Namen");
-            string name = Console.ReadLine();
-
-            if(name.Length > 5)
-            {
-                Console.WriteLine("Oh der Name ist aber lang");
-                
-            }
-            else
-            {
-                Console.WriteLine("Oh der Name ist ja kurz");
-            }
-            
+           for(int zaehlvariable=0;zaehlvariable<10;zaehlvariable++)
+           {
+            Console.WriteLine(zaehlvariable);
+           }
         }   
 
 
