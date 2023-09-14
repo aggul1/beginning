@@ -14,16 +14,30 @@ namespace HelloWorld
         // int ergebnis = 1+1;
         // Console.WriteLine(ergebnis);
 
+
             //Aufgabe 2: Lasse den Nutzer zwei Zahlen eingeben und gebe die Summe auf der Console aus
 
-            Console.WriteLine("Gebe 2 Zahlen an");
-            int zahl1 = Convert.ToInt16(Console.ReadLine());
-            int zahl2 = Convert.ToInt16(Console.ReadLine());
-            int ergebnis = zahl1 + zahl2;
-            Console.WriteLine($"Das Ergebnis lautet: {ergebnis}");
+            // Console.WriteLine("Gebe 2 Zahlen an");
+            // int zahl1 = Convert.ToInt16(Console.ReadLine());
+            // int zahl2 = Convert.ToInt16(Console.ReadLine());
+            // int ergebnis = zahl1 + zahl2;
+            // Console.WriteLine($"Das Ergebnis lautet: {ergebnis}");
             
+
             //Aufgabe 3: Lasse den Nutzer eine Zahl eingeben und gebe alle Zahlen
             //           bis einschließlich der eingegeben Zahl aus
+
+            Console.WriteLine("Gib eine Zahl an");
+            int startwert = 0;
+            int userzahl = Convert.ToInt16(Console.ReadLine());
+            while(startwert<=userzahl)
+            {
+                
+                Console.WriteLine(startwert);
+                startwert++;
+
+            }
+
             //Aufgabe 4: Lasse den Nutzer eine Zahl eingeben und gebe nur die geraden Zahlen aus.
             //           (Hinweis: Modulo operator. => Geteilt durch 2,
             //                  wenn der Rest 0 ist, ist die Zahl gerade)
