@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Numerics;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 
@@ -27,21 +28,37 @@ namespace HelloWorld
             //Aufgabe 3: Lasse den Nutzer eine Zahl eingeben und gebe alle Zahlen
             //           bis einschließlich der eingegeben Zahl aus
 
-            Console.WriteLine("Gib eine Zahl an");
-            int startwert = 0;
-            int userzahl = Convert.ToInt16(Console.ReadLine());
-            while(startwert<=userzahl)
-            {
+            // Console.WriteLine("Gib eine Zahl an");
+            // int startwert = 0;
+            // int userzahl = Convert.ToInt16(Console.ReadLine());
+            // while(startwert<=userzahl)
+            // {
                 
-                Console.WriteLine(startwert);
-                startwert++;
+            //     Console.WriteLine(startwert);
+            //     startwert++;
 
-            }
+            // }
 
             //Aufgabe 4: Lasse den Nutzer eine Zahl eingeben und gebe nur die geraden Zahlen aus.
             //           (Hinweis: Modulo operator. => Geteilt durch 2,
             //                  wenn der Rest 0 ist, ist die Zahl gerade)
+
+            Console.WriteLine("Gib eine Zahl an");
+            int startwert = 0;
+            int userzahl = Convert.ToInt16(Console.ReadLine());
+
+            for (startwert = 0; startwert <= userzahl; startwert++)
+            {
+                if (startwert % 2 ==0)
+                {
+                    Console.WriteLine(startwert);
+                }
+
+            }
+
             //Aufgabe 5: Lasse den Nutzer eine Zahl eingeben und berechne von dieser Zahl die Fakultät.
+
+
             //Aufgabe 6a: Lasse den Nutzer einen Text eingeben und gebe den Text nur in Großbuchstaben aus
             //Aufgabe 6b: Gebe die Länge des Textes aus
             //Aufgabe 6c: Zähle wie oft der Buchstabe a vorkommt.
