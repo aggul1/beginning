@@ -9,31 +9,31 @@ namespace HelloWorld
     {
         static void Main(string[] args){
         
-        //     Console.WriteLine("Bis zu welcher Zahl soll aufsummiert werden? (0,1,2,...,x)");
-        //     int untilNumber = Convert.ToInt16(Console.ReadLine());
+        //Aufgabe 1: Initialisiere 2 Zahlen und gebe die Summe auf der Console aus
+
+        // int ergebnis = 1+1;
+        // Console.WriteLine(ergebnis);
+
+            //Aufgabe 2: Lasse den Nutzer zwei Zahlen eingeben und gebe die Summe auf der Console aus
+
+            Console.WriteLine("Gebe 2 Zahlen an");
+            int zahl1 = Convert.ToInt16(Console.ReadLine());
+            int zahl2 = Convert.ToInt16(Console.ReadLine());
+            int ergebnis = zahl1 + zahl2;
+            Console.WriteLine($"Das Ergebnis lautet: {ergebnis}");
             
-        //     int ergebnis = 0;
-        //     for(int i = 0; i <=untilNumber;i++)
-        //     {
-        //             ergebnis+= i;
-        //             Console.WriteLine($"Added number {i}, current result {ergebnis}");
-        //     }
+            //Aufgabe 3: Lasse den Nutzer eine Zahl eingeben und gebe alle Zahlen
+            //           bis einschließlich der eingegeben Zahl aus
+            //Aufgabe 4: Lasse den Nutzer eine Zahl eingeben und gebe nur die geraden Zahlen aus.
+            //           (Hinweis: Modulo operator. => Geteilt durch 2,
+            //                  wenn der Rest 0 ist, ist die Zahl gerade)
+            //Aufgabe 5: Lasse den Nutzer eine Zahl eingeben und berechne von dieser Zahl die Fakultät.
+            //Aufgabe 6a: Lasse den Nutzer einen Text eingeben und gebe den Text nur in Großbuchstaben aus
+            //Aufgabe 6b: Gebe die Länge des Textes aus
+            //Aufgabe 6c: Zähle wie oft der Buchstabe a vorkommt.
+            //Aufgabe 6d: Gebe nur einen Teil des Textes aus. Ab Position 3, und dann die nächsten 5 Buchstaben
 
-                Console.WriteLine("Bis zu welcher Zahl soll aufsummiert werden? (0,1,2,...,x)");
-            
-                int untilnumber = Convert.ToInt16(Console.ReadLine());
 
-                int i=0;
-                int zahl=0;
-                int ergebnis=0;
-
-                while(i<untilnumber)
-                {
-                    zahl=i+1;
-                    ergebnis+=zahl;
-                    Console.WriteLine($"Added number {i}, current result {ergebnis}");
-                    i++;
-                }
 }
 }
 }
