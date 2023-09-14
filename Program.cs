@@ -10,25 +10,27 @@ namespace HelloWorld
     {
         static void Main(string[] args){
         
+            //Aufgabe 11: Frage den Nutzer nach einer Zahl und zähle von dieser Rückwärts bis 0
 
-            //Aufgabe 7: Frage den Nutzer nach einem Text und ersetze im Text alle vorkommenden „U“ und „u“ durch „G“ und „g“
+                Console.WriteLine("Gib mir eine Zahl!");
+                int counter = Convert.ToInt16(Console.ReadLine());
+                while(counter>=0)
+                {
+                    Console.WriteLine(counter);
+                    counter--;                 
+                }
 
-            // Console.WriteLine("Schreibe etwas!");
-            // string mytext = Console.ReadLine();
-            // string mytext2 = mytext.Replace("g","u").Replace("G","U");
-            // Console.WriteLine(mytext2);
+            //Aufgabe 12: Laufe mit einer For-Schleife über die Namen der Azubis & Studenten. Wenn der Name des Azubis ein „e“ enthält, gebe den Namen aus, ansonsten nicht.
 
-            //Aufgabe 8: Frage den Nutzer nach einer Texteingabe und fülle diese mit bis zu 20 Stellen mit einem y von links auf
 
-            string mytext = Console.ReadLine();
-            int anzahlb = mytext.Length;
-            string mytext2 = mytext.PadLeft(20,'y');
-            Console.WriteLine(mytext2);
 
-            //Aufgabe 9: Frage den Nutzer nach einer Eingabe mit Semikolons ( ; ) und Splitte die Eingabe an diesem Zeichen. Gebe die einzelnen Werte auf der Console aus.
-            
-            //Aufgabe 10: Frage den Nutzer nach einer Eingabe und überprüfe die Texteingabe des Nutzers, ob die Zeichen „abc“ in der Eingabe enthalten sind. Gebe true oder false auf der Konsole aus.
+            //Aufgabe 12b: Wiederhole das Ganze und lass den Nutzer einen Buchstaben bestimmen, nach dem gesucht wird.
 
+            //Aufgabe 13: Frage den Nutzer  wie viele Einträge er in einem int-Array haben möchte. Initialisiere ein int-Array von dieser Größe und befülle dieses Int Array in einer Schleife, indem du den Nutzer jedes Mal frägst, welche Zahl eingetragen werden soll.  
+
+            //           => Gebe anschließend alle Zahlen nacheinander nochmal aus
+
+            //Aufgabe 13b: Gehe das Int-array durch und gebe den Maximal-Wert aus, Minimal-Wert und den Durchschnitt.
  
 
 
