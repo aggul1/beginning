@@ -22,19 +22,33 @@ namespace HelloWorld
 
             //Aufgabe 12: Laufe mit einer For-Schleife über die Namen der Azubis & Studenten. Wenn der Name des Azubis ein „e“ enthält, gebe den Namen aus, ansonsten nicht.
 
-          List<string> names = new List<string> {"Luca", "Katharina", "Hans", "Linh", "Marcia", "Benny", "Niklas", "Lea"};
+    //       List<string> names = new List<string> {"Luca", "Katharina", "Hans", "Linh", "Marcia", "Benny", "Niklas", "Lea"};
 
+    //         foreach(string name in names)
+    //         {
+    //             if(name.Contains('e'))
+    //             {
+    //                 Console.WriteLine(name);
+    //             }
+    //         }
+    //     }
+    // }
+
+            //Aufgabe 12b: Wiederhole das Ganze und lass den Nutzer einen Buchstaben bestimmen, nach dem gesucht wird.
+
+            List<string> names = new List<string> {"Luca", "Katharina", "Hans", "Linh", "Marcia", "Benny", "Niklas", "Lea"};
+            Console.WriteLine("Welchen Buchstaben möchtest du assortieren?");
+            string letter = Console.ReadLine();
             foreach(string name in names)
             {
-                if(name.Contains('e'))
+                if(name.Contains(letter))
                 {
                     Console.WriteLine(name);
                 }
             }
         }
     }
-
-            //Aufgabe 12b: Wiederhole das Ganze und lass den Nutzer einen Buchstaben bestimmen, nach dem gesucht wird.
+}
 
             //Aufgabe 13: Frage den Nutzer  wie viele Einträge er in einem int-Array haben möchte. Initialisiere ein int-Array von dieser Größe und befülle dieses Int Array in einer Schleife, indem du den Nutzer jedes Mal frägst, welche Zahl eingetragen werden soll.  
 
@@ -44,5 +58,5 @@ namespace HelloWorld
  
 
 
-}
+
 
