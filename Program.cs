@@ -8,81 +8,34 @@ namespace HelloWorld
 {
     class Program
     {
-        static void Main(string[] args){
-
-        Console.WriteLine("Gebe mir ein Rechenzeichen");
-        string zahl1 = Console.ReadLine();
-        string zahl2 = Console.ReadLine();
-        
-        string zeichen = Console.ReadLine();
-        switch(zeichen)
+        static void Main(string[] args)
         {
-            case "+":
-                int ergebnis = AdditionwithReturn(zahl1,zahl2);
-                break;
-            case "-":
-                Substraction(zahl1,zahl2);
-                break;
-            case "*":
-                Multiplication(zahl1,zahl2);
-                break;
-            case "/":
-                Division(zahl1,zahl2);
-                break;
-            default:
-                Console.WriteLine("Ich kenne dieses Rechenzeichen nicht");
-            break;
-        }
+
+            //Erstelle eine Randomzahl, die der Nutzer erraten soll. Frage den Nutzer nach einer Zahl zwischen 1 bis 100.
+            // Wenn der Nutzer die Zahl trifft, hat er gewonnen. Wenn nicht, sage ob die Zal zu klein oder zu Groß ist.
+            Console.WriteLine("Versuche die Zahl zwischen 1 und 100 zu erraten");
+
+            Random random = new Random();
+            int numberToGuess = random.Next(0,101);
+
+            int userzahl = Convert.ToInt16(Console.ReadLine());
+
+            while(numberToGuess != userzahl)
+            {
+                Console.WriteLine("Leider Falsch!");
+                if(numberToGuess<userzahl)
+                {
+                    Console.WriteLine("Deine Zahl ist zu groß!");
                 }
-    
-    
-static int AdditionwithReturn(string zahl1, string zahl2)
-     {
-        int numero1 = Convert.ToInt16(zahl1);
-        int numero2 = Convert.ToInt16(zahl2);
-
-        return numero1+numero2;
-     }
-
-     static void Addition(string zahl1, string zahl2)
-     {
-        int numero1 = Convert.ToInt16(zahl1);
-        int numero2 = Convert.ToInt16(zahl2);
+                else if(numberToGuess>userzahl)
+                {
+                    Console.WriteLine("Deine Zahl ist zu klein!");
+                }
+                userzahl= Convert.ToInt16(Console.ReadLine());
+            }
+            Console.WriteLine("Glückwunsch du hast gewonnen!");
+        }
     }
-
-    static void Substraction(string zahl1, string zahl2)
-     {
-        int numero1 = Convert.ToInt16(zahl1);
-        int numero2 = Convert.ToInt16(zahl2);
-    }
-
-    static void Multiplication(string zahl1, string zahl2)
-     {
-        int numero1 = Convert.ToInt16(zahl1);
-        int numero2 = Convert.ToInt16(zahl2);
-    }
-
-    static void Division(string zahl1, string zahl2)
-     {
-        int numero1 = Convert.ToInt16(zahl1);
-        int numero2 = Convert.ToInt16(zahl2);
-    }
-    
-    
-    static void Addition(int zahl1, int zahl2){
-        Console.WriteLine(zahl1+zahl2);
-    }
-    static void Substraction(int zahl1, int zahl2){
-        Console.WriteLine(zahl1-zahl2);
-    }
-     static void Multiplication(int zahl1, int zahl2){
-        Console.WriteLine(zahl1*zahl2);
-    }
-     static void Division(int zahl1, int zahl2){
-        Console.WriteLine(zahl1/zahl2);
-    }
-    }
-
 }
         
 
