@@ -14,21 +14,23 @@ namespace HelloWorld
         int zahl2 = 5;
         Console.WriteLine("Gebe mir ein Rechenzeichen");
         string zeichen = Console.ReadLine();
-        if(zeichen == "+")
+        switch(zeichen)
         {
+            case "+":
             Console.WriteLine(zahl1+zahl2);
-        }
-        else if(zeichen == "-")
-        {
+            break;
+            case "-":
             Console.WriteLine(zahl1-zahl2);
-        }
-        else if(zeichen == "*")
-        {
+            break;
+            case "*":
             Console.WriteLine(zahl1*zahl2);
-        }
-        else if(zeichen == "/")
-        {
+            break;
+            case "/":
             Console.WriteLine(zahl1/zahl2);
+            break;
+            default:
+                Console.WriteLine("Ich kenne dieses Rechenzeichen nicht");
+            break;
         }
                 }
     }
