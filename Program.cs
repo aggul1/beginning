@@ -17,23 +17,37 @@ namespace HelloWorld
         switch(zeichen)
         {
             case "+":
-            Console.WriteLine(zahl1+zahl2);
+            Addition(zahl1,zahl2);
             break;
             case "-":
-            Console.WriteLine(zahl1-zahl2);
+            Substraction(zahl1,zahl2);
             break;
             case "*":
-            Console.WriteLine(zahl1*zahl2);
+            Multiplication(zahl1,zahl2);
             break;
             case "/":
-            Console.WriteLine(zahl1/zahl2);
+            Division(zahl1,zahl2);
             break;
             default:
                 Console.WriteLine("Ich kenne dieses Rechenzeichen nicht");
             break;
         }
                 }
+    
+    static void Addition(int zahl1, int zahl2){
+        Console.WriteLine(zahl1+zahl2);
     }
+    static void Substraction(int zahl1, int zahl2){
+        Console.WriteLine(zahl1-zahl2);
+    }
+     static void Multiplication(int zahl1, int zahl2){
+        Console.WriteLine(zahl1*zahl2);
+    }
+     static void Division(int zahl1, int zahl2){
+        Console.WriteLine(zahl1/zahl2);
+    }
+    }
+
 }
         
 
