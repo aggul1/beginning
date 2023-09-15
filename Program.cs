@@ -10,32 +10,25 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-
-            //Erstelle eine Randomzahl, die der Nutzer erraten soll. Frage den Nutzer nach einer Zahl zwischen 1 bis 100.
-            // Wenn der Nutzer die Zahl trifft, hat er gewonnen. Wenn nicht, sage ob die Zal zu klein oder zu Groß ist.
-            Console.WriteLine("Versuche die Zahl zwischen 1 und 100 zu erraten");
-
-            Random random = new Random();
-            int numberToGuess = random.Next(0,101);
-
-            int userzahl = Convert.ToInt16(Console.ReadLine());
-
-            while(numberToGuess != userzahl)
+            //Frage den Nutzer wieviele Texte er in einem Array speichern will.
+            //Initalisiere das Array in der gewünschten größe
+            // string[] myText = new string[5];
+            //Lasse den Nutzer das Array nacheinander mit Texten befüllen.
+            //Gebe die Texte mit mindestens 20 Zeichen aus, fülle den Text mit Leerzeichen auf von Links wenn kleiner.
+            /* */
+            Console.WriteLine("Wie groß soll dein Array sein?");
+            int arrayanzahl = Convert.ToInt32(Console.ReadLine());
+            string[] myText = new string[arrayanzahl];
+            for(int position=0; position<arrayanzahl; position++)
             {
-                Console.WriteLine("Leider Falsch!");
-                if(numberToGuess<userzahl)
-                {
-                    Console.WriteLine("Deine Zahl ist zu groß!");
-                }
-                else if(numberToGuess>userzahl)
-                {
-                    Console.WriteLine("Deine Zahl ist zu klein!");
-                }
-                userzahl= Convert.ToInt16(Console.ReadLine());
+                string text1 = Console.ReadLine();
+                myText[position]=text1;
             }
-            Console.WriteLine("Glückwunsch du hast gewonnen!");
+            foreach(string entry in myText)
+            {
+                Console.WriteLine(entry.PadLeft(20,' '));
+            } 
         }
-    }
 }
-        
+}       
 
