@@ -10,30 +10,28 @@ namespace HelloWorld
     {
         static void Main(string[] args){
         
-
-
-                Console.WriteLine("Gib mir eine Zahl!");
-                int counter = Convert.ToInt16(Console.ReadLine());
-                int start = 0;
-                while(start<=counter)
-                {
-                    Console.WriteLine(start);
-                    start++;  
-                    if(start%3 == 0)
-                {
-                    Console.WriteLine("Fizz");
-                }      
-                    if(start%5 == 0)
-                {
-                    Console.WriteLine("Buzz");
-                }
-                    if(start%3 == 0 && start%5 == 0)
-                {
-                    Console.WriteLine("FizzBuzz");
-                
-                }
-                }
+        int zahl1 = 10;
+        int zahl2 = 5;
+        Console.WriteLine("Gebe mir ein Rechenzeichen");
+        string zeichen = Console.ReadLine();
+        if(zeichen == "+")
+        {
+            Console.WriteLine(zahl1+zahl2);
         }
+        else if(zeichen == "-")
+        {
+            Console.WriteLine(zahl1-zahl2);
         }
+        else if(zeichen == "*")
+        {
+            Console.WriteLine(zahl1*zahl2);
         }
+        else if(zeichen == "/")
+        {
+            Console.WriteLine(zahl1/zahl2);
+        }
+                }
+    }
+}
+        
 
