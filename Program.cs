@@ -11,18 +11,15 @@ namespace HelloWorld
         static void Main(string[] args)
         {
 
-          Console.WriteLine("Wie groß soll das Array sein?");
-          int aa = Convert.ToInt32(Console.ReadLine());
-          int[] myarray = new int[aa];
-          for(int i=0; i<aa; i++)
-              {
-                int zahl = Convert.ToInt32(Console.ReadLine());
-                myarray[i] = zahl;
-              }
-          Console.WriteLine("------------------");    
-          Console.WriteLine($"Die kleinste Zahl ist: {myarray.Min()}");    
-          Console.WriteLine($"Die groesste Zahl ist: {myarray.Max()}"); 
-          Console.WriteLine($"Der Durchschnittswert beträgt: {myarray.Average()}"); 
+          Console.WriteLine("Gib eine Zahl ein");
+          Console.WriteLine("------------------");
+          int zahl = Convert.ToInt32(Console.ReadLine());
+          Console.WriteLine("------------------");
+          for(; zahl>=0; zahl--)
+          {
+            Console.WriteLine(zahl);
+            
+          }
 }
 }
 }
