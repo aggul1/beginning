@@ -11,50 +11,18 @@ namespace HelloWorld
         static void Main(string[] args)
         {
 
-      Console.WriteLine("Gebe einen Text ein");
-      string mytext = Console.ReadLine();
-      int anzahl = mytext.Length;
-      int anzahlh =  Convert.ToInt32(mytext.Split('h').Length);
-      Console.WriteLine($"Dein Text hat {anzahl} Zeichen");
-      Console.WriteLine($"Der Text beinhaltet {anzahlh-1} h");
-
-//  ----------------------------------------------
-          //Wiederholung
-            //Lasse vom Nutzer einen Text eingeben und gebe folgende Punkte aus
-            //- Länge des Textes
-            //- Anzahl  wie oft Buchstabe h auftaucht            
-
-            Console.WriteLine("Gebe mir einen Text");
-            string eingegebenerText = Console.ReadLine();
-            int laengetext = eingegebenerText.Length;
-            Console.WriteLine("Die Länge des Textes ist " + laengetext);
-            
-            //Möglichkeit 1
-            //string[] splittedText = eingegebenerText.Split("h");
-            
-            //Möglichkeit 2
-            int count = 0;
-            for(int i = 0;i< eingegebenerText.Length;i++)
-            {
-                if(eingegebenerText[i] == 'h')
-                {
-                    count++;
-                }
-            }
-            Console.WriteLine($"Es gibt {count} h's in deinem Text.");
-           //Möglichkeit 2b
-           foreach(char c in eingegebenerText)
-           {
-                if(c == 'h')
-                {
-                    count++;
-                }
-           }
-
-           //Möglichkeit
-           int numberofh = eingegebenerText.Count(c => c == 'h');
-           Console.WriteLine($"Es gibt {numberofh} h's in deinem Text.");
-
-        }
+          Console.WriteLine("Wie groß soll das Array sein?");
+          int aa = Convert.ToInt32(Console.ReadLine());
+          int[] myarray = new int[aa];
+          for(int i=0; i<aa; i++)
+              {
+                int zahl = Convert.ToInt32(Console.ReadLine());
+                myarray[i] = zahl;
+              }
+          Console.WriteLine("------------------");    
+          Console.WriteLine($"Die kleinste Zahl ist: {myarray.Min()}");    
+          Console.WriteLine($"Die groesste Zahl ist: {myarray.Max()}"); 
+          Console.WriteLine($"Der Durchschnittswert beträgt: {myarray.Average()}"); 
 }
-}      
+}
+}
