@@ -30,66 +30,98 @@ namespace HelloWorld
             */
 
           Random random = new Random();
-            
-            int kapital = 10000;
-            int anzahlSpiele = 0; 
-            bool lostLastGame = false;
-            int lastInset = 10;
-            int geworfeneZahl = 0;
-            while(kapital>0 || kapital > 20000) 
-            {
-                lastInset = BerechneEinsatz(kapital, lostLastGame, lastInset, geworfeneZahl);
+          int geld = 10000;
+          int anzahlspiele=0;
+          while(geld>0)
+          {
+              int geworfenezahl = random.Next(0,37);
+              int einsatz = 10;
+              anzahlspiele += 1;
 
-                if(lastInset > kapital)
-                {
-                    lastInset = kapital;
-                }
+                  if(geld>=10000)  //mehr als 10000$
+                  {
 
-                kapital -= lastInset;
-                geworfeneZahl = random.Next(0,37);
-                anzahlSpiele += 1;
+                    if(geworfenezahl % 2 == 0)
+                    {
+                      einsatz = 10;
+                      geld += einsatz;
+                    }
 
-                if(geworfeneZahl % 2 == 0 && geworfeneZahl != 0) 
-                {
-                    kapital = kapital + 2*lastInset;
-                    lostLastGame = false;
-                }
-                else
-                {
-                    lostLastGame = true;
-                }
-                Console.WriteLine($"Anzahl Spiel: {anzahlSpiele}, Geworfene Zahl {geworfeneZahl}, Aktuelles Kapital: {kapital}, Letzter Einsatz: {lastInset}");
+                    else if(geworfenezahl != 0)
+                    {
+                      geld -= einsatz;
+                      einsatz = einsatz*2;
+                    }
+                    else if(geworfenezahl == 0)
+                    {
+                      geld -= einsatz;
+                    }
 
-                Thread.Sleep(10);
-            }
-        }
+                  }  
 
-        static int BerechneEinsatz(int kapital, bool lostLastGame, int lastInset, int geworfeneZahl)
-        {
-            if(geworfeneZahl == 0)
-            {
-                return lastInset;
-            }
+                  if(geld<10000)  //weniger als 10000$
 
-            if(lostLastGame == false && kapital > 10000)
-            {
-                return 10;
-            }
-            else if (lostLastGame == true && kapital > 10000)
-            {
-                return Math.Min(lastInset*2,1000);
-            }
+                        if(geworfenezahl % 2 == 0)
+                          {
+                            einsatz = (10000 - geld)*2;
+                            geld += einsatz;
+                          }
 
-            if(kapital < 10000)
-            {
-                int gesamtVerlust = 10000-kapital;
-                return Math.Min(gesamtVerlust *2, 1000);
-            }
+                        else if(geworfenezahl != 0)
+                          {
+                            einsatz = (10000 - geld)*2;
+                            geld -= einsatz;
+                          }
+                        else if(geworfenezahl ==0)
+                          {
+                            einsatz = (10000 - geld)*2;
+                            geld -= einsatz;
+                        }
 
-            //Trifft nie zu aber C# will den case.
-            return 10;
-        }
+                  if(einsatz>1000)  //einsatz groesser als 1000$
+                  {
+                      if(geworfenezahl % 2 == 0)
+                          {
+                            einsatz = 1000;
+                            geld += einsatz;
+                          }
+
+                        else if(geworfenezahl != 0)
+                          {
+                            einsatz = 1000;
+                            geld -= einsatz;
+                          }
+                        else if(geworfenezahl ==0)
+                          {
+                            einsatz = 1000;
+                            geld -= einsatz;
+                        }
+                  }
+                            
+                  if(geld<einsatz) //kapital reicht nicht für den einsatz (all in)
+                  {
+                      if(geworfenezahl % 2 == 0)
+                          {
+                            einsatz = geld;
+                            geld += einsatz;
+                          }
+
+                        else if(geworfenezahl != 0)
+                          {
+                            einsatz = geld;
+                            geld -= einsatz;
+                          }
+                        else if(geworfenezahl == 0)
+                          {
+                            einsatz = geld;
+                            geld -= einsatz;
+                        }
+                  }
+                  
+          Console.WriteLine($"Anzahl des Spiels: {anzahlspiele} || Geworfene Zahl: {geworfenezahl} || Kapital: {geld}");
+          Thread.Sleep(50);
           }
               
         }
-    
+    }
+}
