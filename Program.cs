@@ -27,40 +27,39 @@ namespace HelloWorld
             //Das Auto fährt schnell. 
             //Das Auto rast.
             */
-            Console.WriteLine("Wie schnell fährt das Auto?");
-            int geschwindigkeit = Convert.ToInt32(Console.ReadLine());
-            string kmh = Fahren(geschwindigkeit);
-            Console.WriteLine($"Das Auto {kmh} ");
+string steht_variable = Fahren(0);
+            string schleicht_variable = Fahren(9);
+            string langsam_variable = Fahren(25);
+            string schnell_variable = Fahren(65);
+            string rast_variable = Fahren(120);
+
+            string base_text = "Das Auto ";
+            Console.WriteLine(base_text + steht_variable);
+            Console.WriteLine(base_text + schleicht_variable);
+            Console.WriteLine(base_text + langsam_variable);
+            Console.WriteLine(base_text + schnell_variable);
+            Console.WriteLine(base_text + rast_variable);
+            Console.WriteLine(base_text + Fahren(-50));
+
         }
 
         static string Fahren(int geschwindigkeit)
         {
-              if(geschwindigkeit==0)
-              {
-                return "steht.";
+            switch(geschwindigkeit)
+            {
+                case 0:
+                    return "steht";
+                case > 0 and <= 10:
+                    return "schleicht";
+                case >10 and <=50:
+                    return "fährt langsam";
+                case >50 and <=100:
+                    return "fährt schnell";
+                case >100:
+                    return "rast";
+                default:
+                    return "auto kaputt";
               }
-              else if(geschwindigkeit<=10 && 1<=geschwindigkeit)
-              {
-                return "schleicht.";
-              }
-              else if(geschwindigkeit<=55 && 11<=geschwindigkeit)
-              {
-                return "fährt langsam.";
-              }
-              else if(geschwindigkeit<=100 && 51<=geschwindigkeit)
-              {
-                return "fährt schnell.";
-              }
-              else if(geschwindigkeit>100)
-              {
-                return "rast.";
-              }
-              else
-              {
-                return "Das Auto ist kaputt!!!";
-              }
-             
-      
         }
     }
 }
